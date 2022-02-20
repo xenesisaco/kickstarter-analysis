@@ -1,49 +1,63 @@
-# An Analysis of Kickstarter Campaigns
-Analysis on Kickstarter data to discover trends.
+# Kickstarting with Excel
 
-## Discription
-A kickstarter dataset was given in order to determine which type of kickstarter (Parent and Sub- Category) to begin, when & where to begin the campaign. 
+## Overview of Project
+Analyze the data to view the correlation between Outcomes and Launch Date, View (by percent) the number of successful, failed and cancelled kickstarts by the Goal ($) amount. 
 
+### Purpose
+Within the dataset we have numerous amounts of Kickstarter campaigns that are defined by 'Parent' Categories and 'Sub' Categories. The analysis conducted is based on the user preference, which in this case is: Parent Category- Theater; Subcategory- Plays. Through the kickstarters goal column, pledge amount and date launched, analysis can be done on how much should the goal amount should be, what moth the Kickstarter should be launched and vice versa. 
 
----
-### 1.Determining Parent Category 
-In the chart below, we have the following parent categories for kickerstarts: _film & video, food, games, journailzm, music, photography, publishing, technology, & theater_. By comparison, theater seems to have the most attempts from all the other parent categories. So we have determined '_Theater_' as our Parent Category for which type of kickstarter campaign to begin. 
+## Analysis and Challenges
+The analysis takes a deeper dive into the success, failure and cancellations (defined as outcomes) of the subcategory of Plays through two approaches: 
 
-  ![Parent Category Outcomes](https://user-images.githubusercontent.com/98041751/154814785-38bb29d7-91c2-4ab6-97cd-96b2a24e3d90.png)
+1. The correlation between the date of when each individual Kickstarter began (by month) and its outcome and 
+2. Each individual Kickstarter goal dollar amount from $0 through +50,000 and its correlation with the percentage of the type of outcome.
 
+### Analysis of Outcomes Based on Launch Date
 
----
-### 2.Determining Subcategory
-Now that Theater has been determined for the parent category as '_Theater_', now it is time to determine the subcategory. Based on the data, there are three subcategories for ‘_Theater_’: _Plays, Musical, & Spaces_. Upon further analysis of the subcategories, ‘Plays’ is the most attempted subcategory with the highest success rate compared to the other two subcategories, as seen in the chart below:
+For reference to the Outcome Based on Launch Date Analysis, please see the chart belo
 
-  ![Subcategory Attempts for Theater Category](https://user-images.githubusercontent.com/98041751/154815928-63c1eb9a-7dae-4ec4-878d-6b9134c1fbdb.png)
+The Y axis represents the count (unit amount) of kickstarters.
+The X axis represents the corresponding month the Kickstarters began. 
+There are a total of 3 lines, each representing individual outcomes: Successful, Failed and Cancelled. Analyzing all three lines at a time, there is a slight trend that is followed by both the successful and failed lines. Hat start in January, go up in Feb, and down again in March. This is continued by an uptick in the months of April, and both reaching their annual peak in May (Successful: 111; Failed:52). Both lines then trend downward until reaching September, where both have an uptick in October and then proceed downward in November. It is only in December where there is a difference in trend. % Failed beats success % by 2%, meaning there are more failed kickstarters that successful kickstarters in the month of December.  
+![Theater_Outcomes_vs_Launch](https://user-images.githubusercontent.com/98041751/154826018-1ea081a8-2acb-48dc-8b56-e569ad945eb6.png)
 
+### Analysis of Outcomes Based on Goals
 
----
-### 3.Determining When to Begin Kickstarter 
-Now that _Theater: Plays_ have been determined to be the Parent and sub-category for the kickstarter, the month of commencment must be chosen. The data set has the date of the kcikstarter commencment and we know wheather that kickstarter was seccussful, failed or canclled. Taking this into account, a timeline was created (see below). Each line represents either successful, failed, cancelled or live kick-starters, depending on the month they were initialized.
+_For reference to the Outcome Based on Goals Analysis, please see the chart below_
 
-  ![Likelyhood of succssful theater campaigns based on month](https://user-images.githubusercontent.com/98041751/154815139-bd56761a-b286-494b-9092-0bfdeb4b56d8.png)
+The Y axis presents the percentage of how many Kickstarters are successful, failed or canceled. The X axis presents the goal amount in 12 ranges (in $), beginning with kickstarters that began with <=$1,000 ending with >$50,000. 
+There are a total of Three lines representing the % successful, % failed and % cancelled, however, there are two lines visible (successful & failed) since there is no data for cancelled. Meaning there were no cancelled Plays. 
 
-Based on the chart above, May is the chosen month to initiate the _Theater-Play_. There are many more successful _Theater:Plays_ initiated in this particual month than any other.  
+Success Line: Projects that have a goal of <$1000 have the best success rate (76%). There is a huge jump when pursing the goal range of $35,000-$39,999 and $40,000-$44,999. These three goal amount ranges seem to be the best to pursue if someone would like to have a successful Kickstarter. 
 
+Failure Line:  The failure rate begins very low, but at the goal amount increases, the failure rate also increases. This can be expected, the higher you raise your goal amount, the more likely someone will not be able to fulfill the goal amount. 
+However, after the line peaks at 25,000-29,999, it declines significantly within the $35,000-$39,999 & $40,000 - $44,999 ranges, then dramatically increases as the goal amount surpasses $44,999. This means that the best goal amount to place is <1000 or between $35,000 - $44,999.
+The correlation between the two lines, as one goes up, the other goes down. If the success percent increases, then by default, the failure rate must decrease simultaneously.
+![Outcomes_vs_Goals](https://user-images.githubusercontent.com/98041751/154825942-408af1e9-634e-4fbe-aaf8-b37ec67b5aa6.png)
 
----
-### 4.Where to Begin the Kickstarter 
-The only other counrty to have a similar intrest in theater-plays is Great Britain (GB). The US has more than double the number of attempts for Theater-plays kickstarters (US: 671; UK:314), the success rate in GB is 14% more than in US (US: 61%; UK: 75%) as seen in the chart below: 
-
-  ![US vs GB Parent Category outcomes](https://user-images.githubusercontent.com/98041751/154817048-cc474bb2-fc9e-4af4-a197-278a41f19a38.png)
+### Challenges and Difficulties Encountered
+	User capabilities, comprehension and errors. 
   
-  However, the US has much more intrest in _Theater: Plays_ than GB, and according to the chart below, US's height of intrest is much more intense for longer periods of time, where as GB intrest hikes around the same time as the US's, but dramatically drops after two months. 
   
-  ![US vs GB timeline](https://user-images.githubusercontent.com/98041751/154817279-9e7755ce-9c81-438e-8106-62b031169d85.png)
-  
-  Take a look as well as the amount of money actually recieved and pleadged by country and kickstarter. Based on the chart below, the average goal amount for US on _Theater:Plays_ is just above $7.1:, whicle in the GB the average goal amount is $2.6K. GB's QLR is between $.7K and $3K while US's is  between 1K-7K, which is quite a difference! There is much more optomism to gain much more contributions in the US than in GB. 
-  ![US vs GB Spedning and reciving average](https://user-images.githubusercontent.com/98041751/154819260-48db583e-591a-4f74-bcee-55a3459b697c.png)
-  
+## Results
+- What are two conclusions you can draw about the Outcomes based on Launch Date?
+  1. The best month to begin a Kickstarter is in the month of May since May has the highest number of successful kick starters (111) compared to all other months. 
+  2.  Failed campaigns are almost half the amount of successful campaigns. The failure chart line somewhat follows the same trend, although the failed kickstarter’s line on the graph seem to be more linear in nature, meaning it does not see as much change as the successful chart line it still has an uptick in the month of May. 
 
----
-## Conclusion
-Based on the analysis conducted, begining a _**Theater: Play**_ kickstarter in the month of May in the US would be the best option as data trends indicate that these factors suggest most of the successful campaigns include the factors mantioned above. 
+- What can you conclude about the Outcomes based on Goals?
+  The best goal amounts to place are >$1000, OR between $35,000 - $44,999.  The worst amount to invest is $45,000 – $49,999 since there is 0 success%. 
 
+
+- What are some limitations of this dataset?
+
+  Each chart presents their own set of limitations, however, simultaneously they do not take into account the reasons the Kickstarter failed/succeeded. The genres with   correlation of country may also present changes to the country if certain countries have preferences. Both charts cannot determine outliers. 
+
+  **Outcomes Based on Goal**: There are multiple Kickstarters that go beyond $50,000 and with this chart, we would not have a clue on how much the goal amount would be for those Kickstarters. Also, through the graph, we cannot determine how many kickstarters there were present. 
+
+  **Theater Outcomes by Launch Date:** This is only a year’s worth of data and cannot be heavily relied upon because we do not know if there were one-time events that could affect the data. We also cannot see if it is a seasonal or rotational trend to follow since it is only a years’ worth of data. 
+
+- What are some other possible tables and/or graphs that we could create?
+
+  	Box and whiskers: To visualize where the medium is and compare it to the QLR and see what a reasonable goal and pledge amount would be. 
+    Stacked Column Chart: To compare the number of successful, failed, and cancelled kickstarters  are to each other as a whole. 
 
